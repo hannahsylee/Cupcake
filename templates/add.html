@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <title>Document</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+<div class="container hidden">
+
+    <h1 class="text-center display-3">Cupcake List</h1>
+    <div class="row justify-content-center">
+        <ul>
+            <!--  -->
+        </ul>
+    </div>
+
+    <h2>Add A Cupcake</h2>
+    <div>
+        <form method="post">
+
+            <div class="mb-3 row">
+                <label for="flavor">Flavor</label>
+                <input type="flavor" name="flavor">
+            </div>
+            <div class="mb-3 row">
+                <label for="size">Size</label>
+                <input type="size" name="size">
+            </div>
+            <div id="like" class="rating mb-3 row">
+                <!-- FIFTH HEART -->
+                <input type="radio" id="heart_5" name="like" value="5" />
+                <label for="heart_5" title="Five">&#10084;</label>
+                <!-- FOURTH HEART -->
+                <input type="radio" id="heart_4" name="like" value="4" />
+                <label for="heart_4" title="Four">&#10084;</label>
+                <!-- THIRD HEART -->
+                <input type="radio" id="heart_3" name="like" value="3" />
+                <label for="heart_3" title="Three">&#10084;</label>
+                <!-- SECOND HEART -->
+                <input type="radio" id="heart_2" name="like" value="2" />
+                <label for="heart_2" title="Two">&#10084;</label>
+                <!-- FIRST HEART -->
+                <input type="radio" id="heart_1" name="like" value="1" />
+                <label for="heart_1" title="One">&#10084;</label>
+            </div>
+            <div class="mb-3 row">
+                <label for="image">Enter Image URL</label>
+                <input type="image" name="image">
+            </div>
+
+            <div class="mb-3 row">
+                <button type="submit" class="btn btn-success button">Add</button>
+            </div>
+        
+        </form>
+    </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"
+integrity="sha256-T/f7Sju1ZfNNfBh7skWn0idlCBcI3RwdLSS4/I7NQKQ=" crossorigin="anonymous"></script>
+<script
+src="https://code.jquery.com/jquery-3.4.1.min.js"
+integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+crossorigin="anonymous"></script>
+<script src="static/todos.js"></script>
+</body>
+
+</html>

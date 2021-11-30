@@ -7,34 +7,52 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <title>Document</title>
+
+  <title>Cupcake</title>
+  <link rel="stylesheet" href="/static/style.css">
 </head>
 
 <body>
-  <div class="container">
+<div class="container">
 
-    <h1 class="text-center display-3">Cupcake List</h1>
-    <div class="row justify-content-center">
-      <div class="col-6">
-        <ul class="list-group">
-          {% for cupcake in cupcakes %}
-          <li class="list-group-item d-flex justify-content-between align-items-center">{{ cupcake.flavor }}<button
-              class="delete-todo btn-sm btn-danger"
-              data-id="{{ cupcake.id }}">X</button></li>
-          {% endfor %}
-        </ul>
-      </div>
+  <h1>See all the cupcakes!</h1>
+
+  <ul id="cupcakes-list">
+  </ul>
+
+  <h2>Add a new cupcake!</h2>
+
+  <form id="new-cupcake-form">
+    <div>
+      <label for="form-flavor">Flavor: </label>
+      <input name="flavor" id="form-flavor">
     </div>
 
-  </div>
+    <div>
+      <label for="form-size">Size: </label>
+      <input name="size" id="form-size">
+    </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"
-    integrity="sha256-T/f7Sju1ZfNNfBh7skWn0idlCBcI3RwdLSS4/I7NQKQ=" crossorigin="anonymous"></script>
-  <script
-    src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-    crossorigin="anonymous"></script>
-  <script src="static/todos.js"></script>
+    <div>
+      <label for="form-rating">Rating: </label>
+      <input type="number" name="rating" id="form-rating">
+    </div>
+
+    <div>
+      <label for="form-image">Image: </label>
+      <input name="image" id="form-image">
+    </div>
+
+
+    <button class="btn btn-success button">Add!</button>
+
+  </form>
+
+</div>
+
+<script src="https://unpkg.com/jquery"></script>
+<script src="https://unpkg.com/axios/dist/axios.js"></script>
+<script src="/static/cupcake.js"></script>
 </body>
 
 </html>
